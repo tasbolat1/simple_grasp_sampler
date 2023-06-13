@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!DOCTYPE launch>
+<launch>
+  
+  <!-- Set some project specific defaults for the panda arm. -->
+  <rosparam command="load" file="$(find grasp_sampler)/cfg/pc_conf.yaml" ns="/grasp_generator"/>
+
+<node name="grasp_sampler" pkg="grasp_sampler" type="grasp_generator.py">
+    <!-- The action server for Robotiq requires input/output to be at /input and /output -->
+</node>
+  <!-- <node pkg="tf" type="static_transform_publisher" name="realsense_link_broadcaster" args="-0.069 -0.014 0.055 0.711 -0.005 0.703 -0.007 /robotiq_arg2f_base_link /camera_link 100" /> -->
+</launch>
